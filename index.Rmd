@@ -4,11 +4,17 @@ output:
   html_document:
     toc: true
     toc_float: true
-    code_folding: hide
 ---
 
 Hello
-你好
 
+This is Yue Liu's website. 
 
+## Link to page within the site
+
+[About me](about.html)
+
+[Resume](resume.html)
+
+[Dashboard](dashboard.html)
 

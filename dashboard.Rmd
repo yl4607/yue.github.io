@@ -1,14 +1,14 @@
 ---
-title: "plotly for noaa"
+title: "Dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    code_folding: hide
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
 ---
 
-
-```{r include=FALSE}
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
@@ -27,7 +27,10 @@ ny_noaa =
     snow = round(snow_mm * 0.03937 * 4) / 4)
 ```
 
-## bar plot
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 ny_noaa %>% 
@@ -42,7 +45,10 @@ ny_noaa %>%
   layout(title = "snow depth counts for November, December and January in 2007")
 ```
 
-## scatterplot
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Chart B
 
 ```{r}
 ny_noaa %>% 
@@ -51,10 +57,10 @@ ny_noaa %>%
   plot_ly(
     x = ~snow_mm, y = ~tmin, 
     alpha = 0.5, type = "scatter", mode = "markers") %>% 
-layout(title = "min temperature vs. snow depth for November, December and January in 2007")
+layout(title = "min temp vs. snow depth for Nov, Dec and Jan 2007")
 ```
 
-## boxplot
+### Chart C
 
 ```{r}
 ny_noaa %>% 
@@ -65,3 +71,4 @@ ny_noaa %>%
           type = "box", colors = "viridis") %>% 
   layout(title = "boxplot of tmax vs. tmin for November and December in 2007")
 ```
+
