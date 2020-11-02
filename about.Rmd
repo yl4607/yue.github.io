@@ -1,0 +1,16 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+![](images/IMG_5167.jpg)
+
+Yue Liu or 刘玥
+
+is a student at Columbia University Mailman School of Public Health Biostatistics MS program. 
+
+She now lives happily with her cat, Tappie. 
+

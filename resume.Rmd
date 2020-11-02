@@ -1,0 +1,43 @@
+---
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<h1 style="text-align:center">Résumé </h1>
+
+### Education
+
+• Columbia University, Mailman School of Public Health, New York, NY <font size ="0.8">Expected May 2022</font>
+
+&nbsp; &nbsp; Master of Science (MS) in Biostatistics
+  Pharmaceutical Statistics Track
+
+• University of California, Davis, College of Biological Sciences, Davis, CA <font size ="0.8">Jun. 2020</font>
+
+&nbsp; &nbsp; Bachelor of Science (BS) Majored in Neurobiology, Physiology, and Behavior, Minored in Statistics
+
+- - - 
+
+### Research Experience
+
+**University of California, Davis**, Davis, CA
+
+Research Assistant, Dr. Chengji Zhou’s Lab <font size ="0.8">Nov. 2017 – Aug. 2020</font>
+
+Supported with research in 2 biochemistry and biophysics published studies. Accurately extracted DNA samples from mouse tissues and ran PCR samples to discover mechanisms underlying mammalian neural tube closure and orofacial clefts development.
+
+Performed daily mouse pregnancy detection and euthanasia tasks on every weekend to ensure genetic data can be collected correctly.
+
+Conducted independent research tasks on detecting Wnt/$\beta$ - catenin signaling by using luciferase assays and HEK293 cells.
+
+- - - 
+
+### Additional Experience 
+
+**Shanghai Public Health Clinical Center**, Shanghai, China
+
+Epidemiology Research Intern, Dr. Pei Ning’s lab	<font size ="0.8">Oct. 2019 – Nov. 2019</font>
+
+Analyzed 429 tuberculosis patients’ medication susceptibility test results to verify significant differences exist in drug resistance conditions among patients by using R. 
