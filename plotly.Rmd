@@ -1,0 +1,66 @@
+---
+title: "plotly for noaa"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("ny_noaa")
+
+ny_noaa = 
+  ny_noaa %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>% 
+  mutate(
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin),
+    snow_mm = snow,
+    snow = round(snow_mm * 0.03937 * 4) / 4)
+```
+
+## bar plot
+
+```{r}
+ny_noaa %>% 
+  filter(month %in% c(11, 12, 1),
+         year %in% 2007,
+         snow_mm < 100, snow_mm > 0) %>% 
+  count(snow_mm) %>% 
+  mutate(snow_mm = factor(snow_mm),
+         snow_mm = fct_reorder(snow_mm, n)) %>% 
+  plot_ly(x = ~snow_mm, y = ~n, color = ~snow_mm,
+          type = "bar", colors = "viridis") %>% 
+  layout(title = "snow depth counts for November, December and January in 2007")
+```
+
+## scatterplot
+
+```{r}
+ny_noaa %>% 
+  filter(month %in% c(11, 12, 1),
+         year %in% 2007 ) %>% 
+  plot_ly(
+    x = ~snow_mm, y = ~tmin, 
+    alpha = 0.5, type = "scatter", mode = "markers") %>% 
+layout(title = "min temperature vs. snow depth for November, December and January in 2007")
+```
+
+## boxplot
+
+```{r}
+ny_noaa %>% 
+  group_by(month) %>% 
+  filter(month %in% c(11, 12),
+         year %in% 2007 ) %>% 
+  plot_ly(y = ~tmax, x = ~tmin,
+          type = "box", colors = "viridis") %>% 
+  layout(title = "boxplot of tmax vs. tmin for November and December in 2007")
+```
