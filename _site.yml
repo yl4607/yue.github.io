@@ -5,18 +5,14 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "Resume"
-      href: resume.html
     - text: "Plotly"
       href: plotly.html
     - text: "Dashboard"
       href: dashboard.html
-    - icon: fa-github fa-lg
-      href: http://github.com/yl4607/
-    - icon: fa-linkedin fa-lg
-      href: https://www.linkedin.com/in/yue-liu-0b34131a4/
     - icon: fa-envelope fa-lg
-      href: mailto:<yl4607@cumc.columbia.edu>
+      href: mailto:<you@youremail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/bst-P8105/
 output:
   html_document:
     theme: cosmo

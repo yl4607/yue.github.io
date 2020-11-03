@@ -11,7 +11,7 @@
 
 
 
-<title>Yue’s website</title>
+<title>Jeff’s website</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -259,6 +260,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -365,29 +369,20 @@ div.tocify {
   <a href="about.html">About</a>
 </li>
 <li>
-  <a href="resume.html">Resume</a>
-</li>
-<li>
   <a href="plotly.html">Plotly</a>
 </li>
 <li>
   <a href="dashboard.html">Dashboard</a>
 </li>
 <li>
-  <a href="http://github.com/yl4607/">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.linkedin.com/in/yue-liu-0b34131a4/">
-    <span class="fa fa-linkedin fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="mailto:&lt;yl4607@cumc.columbia.edu&gt;">
+  <a href="mailto:&lt;you@youremail.com&gt;">
     <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/bst-P8105/">
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -398,20 +393,63 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
-<h1 class="title toc-ignore">Yue’s website</h1>
+
+<h1 class="title toc-ignore">Jeff’s website</h1>
 
 </div>
 
 
-<p>Hello</p>
-<p>This is Yue Liu’s website.</p>
+<div id="this-is-jeffs-awesome-website" class="section level1">
+<h1>This is Jeff’s awesome website</h1>
+<p>What if I add some text here…?</p>
+<div id="heres-a-subsection" class="section level2">
+<h2>Here’s a subsection</h2>
+<p>And here’s some addition text…</p>
+<pre class="r"><code>rnorm(10)</code></pre>
+<pre><code>##  [1] -1.55731726  0.02559832 -1.60137467 -1.44635407 -0.28974419  0.01621007
+##  [7] -1.22660712 -0.87552023 -0.44500873 -0.13255138</code></pre>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p>Let’s link to useful tools for data science:</p>
+<ul>
+<li><a href="https://www.google.com/">Google</a></li>
+<li><a href="https://p8105.com">P8105</a></li>
+</ul>
+</div>
+<div id="local-image" class="section level2">
+<h2>Local image</h2>
+<p><img src="image/IMG_4968.jpg"style = "width:75%"></p>
+<p><img src="image/IMG_4968.jpg" /></p>
+</div>
 <div id="link-to-page-within-the-site" class="section level2">
 <h2>Link to page within the site</h2>
 <p><a href="about.html">About me</a></p>
-<p><a href="resume.html">Resume</a></p>
-<p><a href="dashboard.html">Dashboard</a></p>
+</div>
+<div id="quarterly-results" class="section level2 tabset">
+<h2>Quarterly Results</h2>
+<div id="by-product" class="section level3">
+<h3>By Product</h3>
+<p>Thie is my first tab and i can do stuff</p>
+</div>
+<div id="by-region" class="section level3">
+<h3>By Region</h3>
+<p>this is my second tab</p>
+</div>
+</div>
+<div id="this-is-a-new-section" class="section level2">
+<h2>This is a new section</h2>
+<p>great</p>
+</div>
 </div>
 
 
@@ -449,6 +487,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {
